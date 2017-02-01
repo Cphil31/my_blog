@@ -14,19 +14,19 @@ ORM::configure('password','root');
 <body>
 	<h1>Mon blog </h1>
 	
-		<table class="ui celled table">
-			<?php 
+	<table class="ui celled table">
+		<?php 
 
-			$tab = ORM::for_table('posts')->find_many();
-			foreach ($tab as $tableau) {
+		$tab = ORM::for_table('posts')->find_many();
+		foreach ($tab as $tableau) {
 
-				echo $tableau->id.$tableau->title." ".$tableau->author." ".$tableau->content." ".$tableau->created_at." ".$tableau->updated_at.'</br>';
+			echo $tableau->id.$tableau->title." ".$tableau->author." ".$tableau->content." ".$tableau->created_at." ".$tableau->updated_at.'</br>';
 
-			}
+		}
 
-			?>
-
-		</table> 
+		?>
+	</table> 
+		<button class="ui button" type="submit">ajouter article </button>
 	
 </body>
 </html> 
